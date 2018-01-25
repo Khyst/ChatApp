@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.khystchatapp.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <EditText
+        android:id="@+id/input_Message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Hello Text"
+        android:layout_toLeftOf="@+id/send_Massage"
+        android:layout_toStartOf="@id/send_Massage" />
+
+    <Button
+        android:id="@+id/send_Massage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/input_Message"
+        android:layout_alignBottom="@+id/input_Message"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Button"
+        android:onClick="onClick"
+        />
+
+    <LinearLayout
+        android:id="@+id/Message_log"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/input_Message"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="70dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:selectAllOnFocus="false"
+            android:singleLine="false"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        <TextView
+            android:id="@+id/cpu_Massage"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="안녕하세요"
+            android:textColor="@android:color/black"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/user_Massage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="ㅇㅇ"
+            android:textSize="24dp"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+</RelativeLayout>
